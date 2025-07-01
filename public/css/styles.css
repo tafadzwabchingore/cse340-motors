@@ -3,4 +3,360 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+#top-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  padding: 10px 0 30px 0;
+}
+
+ul.notice {
+  padding: 10px 40px;
+  color: red;
+}
+
+.siteName {
+  font-size: 3rem;
+  text-align: left;
+}
+
+.siteName a {
+  text-decoration: none;
+  color: rgb(21, 61, 113);
+  font-family: "Roboto", sans-serif;
+}
+
+#tools {
+  font-size: 1.6rem;
+  text-align: right;
+  /* padding: 0 10px; */
+}
+
+#tools a {
+  text-decoration: none;
+  color: black;
+}
+
+div.accountManagement {
+  padding: 0 10px;
+}
+
+div.accountManagement h2, div.accountManagement h3 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+}
+
+div.accountManagement p {
+  padding: 5px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style: none;
+  background-color: black;
+  color: white;
+  padding: 20px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  
+  /* font-size: 1.2rem; */
+}
+
+.welcome-title {
+  font-size: 1.4rem;
+  padding: 15px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.vehicle-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 10px 20px;
+}
+
+.car-details {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  color: rgb(21, 61, 113);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 10px 0 0;
+  margin: 0 30px 0 0;
+}
+
+.car-details p:first-child {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.car-details p:nth-child(2) {
+  font-size: 1rem;
+}
+
+.today {
+  width: 120px;
+  height: 40px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.vehicle {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  max-width: 100%;
+  z-index: -1;
+}
+
+/* -----Vehicle reviews------ */
+.vehicle-reviews {
+  padding: 10px 0;
+}
+
+.vehicle-reviews h2 {
+  padding: 10px 0;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.reviews li {
+  padding: 5px 0;
+  list-style: none;
+}
+
+/* ----Vehicle Upgrades---- */
+.vehicle-upgrades {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.upgrade-title {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.flux {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  place-content: center;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(126, 251, 251);
+}
+
+.flux img {
+  padding: 5px 45px;
+}
+
+.flame {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  place-content: center;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(126, 251, 251);
+
+}
+
+.flame img {
+  padding: 5px 45px;
+}
+
+.bumper {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  place-content: center;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(126, 251, 251);
+
+}
+
+.bumper img {
+  padding: 5px 45px;
+}
+
+.hub {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: grid;
+  place-content: center;
+  grid-template-rows: auto auto;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(126, 251, 251);
+
+}
+
+.hub img {
+  padding: 5px 45px;
+}
+
+/* --------Footer------- */
+.footer-text {
+  padding: 20px;
+}
+
+@media only screen and (min-width: 1300px) {
+  html {
+    padding: 70px 100px;
+    background-image:url(../images/site/checkerboard.jpg)
+  }
+
+  body {
+    border: 4px solid rgb(21, 61, 113);
+    border-radius: 1%;
+    padding: 0 20px;
+    background-color: white;
+  }
+
+  ul.notice li {
+    font-size: 1.5rem;
+  }
+
+
+  .siteName {
+    font-size: 3.5rem;
+  }
+
+  #tools {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+
+  nav ul {
+    padding: 20px 50px;
+  }
+
+  nav ul li a {
+    font-size: 1.8rem;
+  }
+
+  .deleteMessage, .registerMessage, .classificationMessage {
+    font-size: 1.8rem;
+  }
+
+  /* -------Body------ */
+  .welcome-title {
+    font-size: 3.5rem;
+  }
+  
+  .vehicle-info {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .car-details {
+    padding: 60px 0 0 140px;
+    line-height: 40px;
+    z-index: 2;
+  }
+
+  .car-details p:first-child {
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+  }
+  
+  .car-details p:nth-child(2) {
+    font-size: 2rem;
+    padding-bottom: 40px;
+  }
+  
+  .today {
+    width: 180px;
+    height: 70px;
+  }
+
+  .vehicle {
+    grid-column: 1/4;
+    width: 1120px;
+    z-index: 1;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    place-content: center;
+    justify-content: center;
+  }
+
+  .vehicle-upgrades {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .upgrade-title {
+    font-size: 2.4rem;
+    font-weight: bolder;
+    padding: 60px 0;
+  }
+
+  .vehicle-upgrades div img {
+    width: 200px;
+  }
+
+  .vehicle-upgrades div a {
+    font-size: 1.5rem;
+  }
+
+/* ------Reviews------- */
+
+  .vehicle-reviews {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .vehicle-reviews h2 {
+    font-size: 2.4rem;
+    font-weight: bolder;
+    padding: 60px 0;
+  }
+
+  .reviews li {
+    padding: 5px 0;
+    font-size: 2rem;
+    line-height: 40px;
+  }
+
+  /* ---------footer------- */
+  .footer-text {
+    font-size: 1.5rem;
+  }
+
+  #inv-display {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  #inv-display li {
+    width: 25em;
+  }
+
+
+  #product-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  #inv-display li {
+    width: 25em;
+  }
+
+  .details {
+    padding: 3rem;
+  }
 }

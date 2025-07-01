@@ -10,6 +10,8 @@ const expressLayouts = require("express-ejs-layouts")
 const env = require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
+const session = require("express-session");
+const flash = require("connect-flash");
 
 /* ***********************
  * View Engine and Templates
@@ -36,3 +38,20 @@ const host = process.env.HOST
 app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`)
 })
+
+
+// Session middleware
+app.use(session({
+  secret: "superSecretKey",
+  resave: false,
+  saveUninitialized: true
+}));
+
+// Flash middleware
+app.use(flash());
+
+// Middleware to make flash messages available to all views
+app.use(function(req, res, next) {
+  res.locals.messages = require("express-messages")(req, res);
+  next();
+});
