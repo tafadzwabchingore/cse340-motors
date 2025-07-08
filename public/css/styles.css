@@ -66,6 +66,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
+  color: white;
   
   /* font-size: 1.2rem; */
 }
@@ -210,6 +211,33 @@ nav ul li a {
 /* --------Footer------- */
 .footer-text {
   padding: 20px;
+}
+
+/*CLASSIFICATION PAGE*/
+#inv-display {
+  display: grid;
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+  justify-content: center;
+}
+
+#inv-display li img {
+  max-height: 50%;
+}
+#inv-display li {
+  max-width: 25em;
+  background-color: black;
+  color: white;
+  border-radius: 1.5em;
+  padding: 2em;
+  text-align: center;
+}
+
+.namePrice h2 a {
+  color: white;
+  display: block;
+  margin: 1rem;
 }
 
 @media only screen and (min-width: 1300px) {
