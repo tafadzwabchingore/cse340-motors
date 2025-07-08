@@ -240,6 +240,45 @@ nav ul li a {
   margin: 1rem;
 }
 
+/* Handling Errors */
+.error-section {
+  background-color: #fff0f0;
+  border: 1px solid #ffcccc;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(200, 0, 0, 0.1);
+}
+
+.error-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.error-message p {
+  font-weight: bold;
+  color: #c0392b;
+  align-items: center;
+}
+
+.returnHome {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #c0392b;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.returnHome:hover {
+  background-color: #a93226;
+}
+
 @media only screen and (min-width: 1300px) {
   html {
     padding: 70px 100px;
@@ -387,4 +426,11 @@ nav ul li a {
   .details {
     padding: 3rem;
   }
+}
+
+/*Error message return home*/
+.returnHome {
+  display: inline-block; 
+  margin-top: 20px;
+  text-decoration: none;
 }
