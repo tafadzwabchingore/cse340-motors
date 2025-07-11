@@ -240,10 +240,23 @@ nav ul li a {
   margin: 1rem;
 }
 
+/* CAR DETAILS PAGE */
+
+#product-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  padding: 0 1rem;
+  line-height: 2rem;
+}
+
 /* Handling Errors */
 .error-section {
-  background-color: #fff0f0;
-  border: 1px solid #ffcccc;
+  background-color: rgb(201, 255, 255);
+  border: 1px solid rgb(21, 61, 113);
   padding: 2rem;
   border-radius: 12px;
   margin-top: 2rem;
@@ -254,12 +267,10 @@ nav ul li a {
 .error-section p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  color: #333;
 }
 
 .error-message p {
   font-weight: bold;
-  color: #c0392b;
   align-items: center;
 }
 
@@ -267,7 +278,7 @@ nav ul li a {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #c0392b;
+  background-color: rgb(21, 61, 113);
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -276,7 +287,7 @@ nav ul li a {
 }
 
 .returnHome:hover {
-  background-color: #a93226;
+  background-color: rgb(19, 43, 73);
 }
 
 @media only screen and (min-width: 1300px) {
