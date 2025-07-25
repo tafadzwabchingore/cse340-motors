@@ -91,6 +91,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get("/.well-known/appspecific/com.chrome.devtools.json", (req, res) => {
+  res.status(204).end(); // No Content
+})
+
 /* ***********************
 * Express Error Handler 404 error
 * Place after all other middleware
