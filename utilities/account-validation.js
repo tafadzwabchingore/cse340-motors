@@ -1,4 +1,4 @@
-const utilities = require(".")
+const utilities = require("../utilities")
 const { body, validationResult } = require("express-validator")
 const validate = {}
 const accountModel = require("../models/account-model")
@@ -6,7 +6,7 @@ const accountModel = require("../models/account-model")
 /*  **********************************
  *  Registration Data Validation Rules
  * ********************************* */
-  validate.registationRules = () => {
+  validate.registrationRules = () => {
     return [
       // firstname is required and must be string
       body("account_firstname")

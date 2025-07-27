@@ -33,3 +33,6 @@ SET inv_image = REPLACE(inv_image, '/images/', '/images/vehicles/'),
 
 -- Resetting the account table and its auto-incremented IDs
 TRUNCATE TABLE public.account RESTART IDENTITY;
+
+--Reset sequence manually	
+ALTER SEQUENCE account_account_id_seq RESTART WITH 1;
