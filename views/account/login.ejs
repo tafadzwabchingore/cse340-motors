@@ -32,8 +32,9 @@
   <fieldset class="data-box">
     <label for="accountEmail">Email:</label>
       <input type="email" name="account_email" id="accountEmail" required value="<%= locals.account_email %>">
-    <label for="accountPassword">Password:<br>
-      <input type="password" name="account_password" id="accountPassword" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+    <label for="account_password">Password:<br>
+      <input type="password" name="account_password" id="account_password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+      <span id="pswdBtn">Show Password</span>
       <span>Passwords must be at least 12 characters and contain at least 1 number, 1 capital letter and 1 special character</span> 
     </label>
   </fieldset>
@@ -42,3 +43,5 @@
         <button class="signup-button" onclick="location.href='/account/register'">Sign-up</button>
     </p>
 </form>
+
+<script src="/js/showPassword.js"></script>

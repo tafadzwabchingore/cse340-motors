@@ -1,4 +1,5 @@
 /******* Change Box Model ***************/
+/************ Main *************/
 *,
 *:before,
 *:after {
@@ -39,19 +40,6 @@ ul.notice {
 #tools a {
   text-decoration: none;
   color: black;
-}
-
-div.accountManagement {
-  padding: 0 10px;
-}
-
-div.accountManagement h2, div.accountManagement h3 {
-  padding: 10px 0;
-  font-size: 1.4rem;
-}
-
-div.accountManagement p {
-  padding: 5px 0;
 }
 
 nav ul {
@@ -290,9 +278,9 @@ nav ul li a {
   background-color: rgb(19, 43, 73);
 }
 
-/* Login View */
+/* Login View, Registration View, Update Account  */
 
-form#loginForm, form#registerForm, form#deleteForm, form#updateForm{
+form#loginForm, form#registerForm, form#deleteForm, form#updateForm, form#updateAccountForm, form#updateAccountForm2 {
   background-color: rgb(21, 61, 113);
   padding: 20px;
   font-size: 1rem;
@@ -330,53 +318,55 @@ input[type="password"] {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 14px;
-}
-
-.signup-button {
-  background-color: white;
-  color: rgb(21, 61, 113);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* Hover effect for the button */
-.signup-button:hover {
-  background-color: rgb(89, 144, 216);
-  color: white;
-  transform: translateY(-1px); /* Subtle lift effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.2); /* Enhanced shadow on hover */
-}
-
-/* Active (click) effect for the button */
-.signup-button:active {
-    background-color: rgb(115, 176, 255);
-    color: white;
-    transform: translateY(0); /* Return to original position */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Smaller shadow when clicked */
+  font-weight: bolder;
 }
 
 #loginForm button, #registerForm button, #deleteForm button, #updateForm button {
-  font-size: 2rem;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
   font-weight: bolder;
-  padding: 10px 5px;
-  margin: 10px 0;
+  background-color: white;
   color: rgb(21, 61, 113);
 }
 
-#updateAccountForm button , #updateAccountForm2 button {
-  background-color: rgb(21, 61, 113);
+#loginForm button:hover, #registerForm button:hover, #deleteForm button:hover, #updateForm button:hover {
+  background-color: #0056b3;
   color: white;
-  padding: 5px;
-  margin: 0 10px;
+  transform: translateY(-1px); /* Subtle lift effect */
+}
+
+#loginForm button:active, #registerForm button:active, #deleteForm button:active, #updateForm button:active {
+  background-color: #004494;
+  color: white;
+  transform: translateY(0); /* Return to original position */
+}
+
+#updateAccountForm button , #updateAccountForm2 button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: white;
+  color: rgb(21, 61, 113);
+}
+
+#updateAccountForm button:hover, #updateAccountForm2 button:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: translateY(-1px); /* Subtle lift effect */
+}
+
+#updateAccountForm button:active, #updateAccountForm2 button:active {
+  background-color: #004494;
+  color: white;
+  transform: translateY(0); /* Return to original position */
 }
 
 .deleteMessage, .registerMessage, .classificationMessage {
@@ -386,7 +376,14 @@ input[type="password"] {
   font-size: 1.1rem;
 }
 
- /* MANAGEMENT PAGE */
+/* Show Password Button */
+#pswdBtn {
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+ /* INVENTORY MANAGEMENT PAGE */
 
 /* Button Styles */
 .button-add {
@@ -413,7 +410,8 @@ input[type="password"] {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 90%; /* Adjust for mobile view */
+    max-width: 90%; /* Full width on mobile */
+    width: 600px; /* Limit width on larger screens */
 }
 
 /* Between add new inventory and manage inventory */
@@ -503,6 +501,45 @@ noscript {
 #inventoryDisplay td a:hover {
     color: #0056b3;
 }
+
+/* Account Management View */
+.accountManagement {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Full width on mobile */
+    box-sizing: border-box; 
+}
+
+.accountManagement h2,
+.accountManagement h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.accountManagement p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Link Styles within accountManagement */
+.accountManagement a {
+    color: #007bff; /* Primary blue for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block; /* Allows padding and margin if needed */
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.accountManagement a:hover {
+    color: rgb(21, 61, 113); /* Darker blue on hover */
+}
+
 
 @media only screen and (min-width: 1300px) {
   html {
@@ -680,21 +717,8 @@ form#loginForm, form#registerForm, form#deleteForm, form#updateForm{
     font-size: 1.5rem;
   }
 
-  /* Management Page */
-  .button-add {
-    font-size: 1.4rem;
-  }
+  /* Inventory Management Page */
 
-  .manageInv {
-    font-size: 1.5rem;
-    line-height: 50px;
-  }
-
-  div.manageInv h2 {
-    font-size: 1.8rem;
-  }
-
-/*----------*/
 .manageInv {
         max-width: 1200px; /* Wider for larger screens */
     }
@@ -712,5 +736,28 @@ form#loginForm, form#registerForm, form#deleteForm, form#updateForm{
     .separator {
         width: 50%; /* Make it narrower on very wide screens for elegance */
         max-width: 800px; /* Increase max-width if desired */
+    }
+
+    /* Account management View */
+ .accountManagement {
+        max-width: 700px;
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .accountManagement h2 {
+        font-size: 2em;
+    }
+
+    .accountManagement h3 {
+        font-size: 1.6em;
+    }
+
+    .accountManagement p {
+        font-size: 1.1em;
+    }
+
+    .accountManagement a {
+        font-size: 1.05em;
     }
 }
