@@ -387,27 +387,121 @@ input[type="password"] {
 }
 
  /* MANAGEMENT PAGE */
+
+/* Button Styles */
 .button-add {
-  padding: 10px;
-  display: block;
-  background: none;
-  border: none;
-  margin: 0 20px;
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 1px 20px;
+    background-color: rgb(21, 61, 113);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
+.button-add:hover {
+    background-color: #0056b3;
+}
+
+/* Manage Inventory Section */
 .manageInv {
-  padding: 10px;
-  display: block;
-  margin: 0 20px;
-  line-height: 30px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Adjust for mobile view */
 }
 
-.pwMessage {
-  padding: 10px 0;
+/* Between add new inventory and manage inventory */
+.separator {
+  height: 2px; /* Thickness of the line */
+  background: rgb(21, 61, 113);
+  margin: 30px auto; /* Center it and give some vertical space */
+  margin-bottom: auto;
 }
 
-#inv_description {
-  padding-bottom: 40px;
+.manageInv h2 {
+    color: rgb(21, 61, 113);;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.manageInv p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Select Box Styles */
+.manageInv select {
+    display: block;
+    width: 90%; /* Full width on mobile */
+    padding: 10px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    -webkit-appearance: none; /* Remove default arrow on some browsers */
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-13%205.4-13%2013s5.4%2013%2013%2013h255.3c6.5%200%2013-5.4%2013-13%200-6.6-5.4-13-13-13z%22%2F%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%20223.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-13%205.4-13%2013s5.4%2013%2013%2013h255.3c6.5%200%2013-5.4%2013-13%200-6.6-5.4-13-13-13z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px;
+}
+
+/* Inventory Table Styles */
+#inventoryDisplay {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    display: block; /* Make table a block element for overflow */
+}
+
+#inventoryDisplay th,
+#inventoryDisplay td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#inventoryDisplay th {
+    background-color: rgb(21, 61, 113);
+    color: white;
+    white-space: nowrap; /* Prevent wrapping for headers */
+}
+
+#inventoryDisplay tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#inventoryDisplay tr:hover {
+    background-color: #e8e6e6;
+}
+
+/* No-JS message */
+noscript {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+#inventoryDisplay td a {
+    text-decoration: none; /* Removes the underline */
+    color: rgb(21, 61, 113); /* Keeps the link color the same as the parent text, or set a specific color */
+    /* Example: color: #007bff; if you want them blue like other buttons */
+}
+
+/* Optional: Add a hover effect since the underline is gone */
+#inventoryDisplay td a:hover {
+    color: #0056b3;
 }
 
 @media only screen and (min-width: 1300px) {
@@ -599,4 +693,24 @@ form#loginForm, form#registerForm, form#deleteForm, form#updateForm{
   div.manageInv h2 {
     font-size: 1.8rem;
   }
+
+/*----------*/
+.manageInv {
+        max-width: 1200px; /* Wider for larger screens */
+    }
+
+    .manageInv select {
+        width: 50%; /* Adjust select width */
+    }
+
+    /* Prevent table horizontal scroll on large screens */
+    #inventoryDisplay {
+        overflow-x: visible;
+        display: table;
+    }
+
+    .separator {
+        width: 50%; /* Make it narrower on very wide screens for elegance */
+        max-width: 800px; /* Increase max-width if desired */
+    }
 }
